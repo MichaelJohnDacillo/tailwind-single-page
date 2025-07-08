@@ -1,0 +1,139 @@
+@font-face{
+    font-family: "Poppins";
+    src: url(/fonts/Poppins-Regular.woff2) format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face{
+    font-family: "Poppins";
+    src: url(/fonts/Poppins-Medium.woff2) format("woff2");
+    font-weight: 500;
+    font-display: swap;
+}
+@font-face{
+    font-family: "Poppins";
+    src: url(/fonts/Poppins-SemiBold.woff2) format("woff2");
+    font-weight: 600;
+    font-display: swap;
+}
+@font-face{
+    font-family: "Poppins";
+    src: url(/fonts/Poppins-Bold.woff2) format("woff2");
+    font-weight: 700;
+    font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base{
+    html{
+        @apply scroll-smooth scroll-p-16;
+    }
+    body{
+        @apply overflow-x-hidden font-poppins text-black/80 text-base;
+    }
+    .container{
+        @apply max-w-7xl w-full mx-auto px-4;
+    }
+    h1{
+        @apply text-[clamp(2rem,_6vw,_3rem)] font-bold;
+    }
+    h2{
+        @apply text-[clamp(1.5rem,_5vw,_2.5rem)] font-bold;
+    }
+    h3{
+        @apply text-[clamp(1.25rem,_5vw,_2rem)] font-bold;
+    }
+    h4{
+        @apply text-[clamp(1rem,_3vw,_1.75rem)] font-bold;
+    }
+    h5{
+        @apply text-xl font-semibold;
+    }
+    h6{
+        @apply text-lg font-semibold;
+    }
+
+}
+
+@layer components{
+
+    .headerNav{
+        @apply flex items-center hidden;
+    }
+    .headerNav ul{
+        @apply font-semibold flex gap-12;
+    }
+
+    .about__card{
+        @apply max-w-96;
+    }
+    .about__card{
+        @apply flex flex-col items-center text-center shadow-2xl py-10 px-12 rounded-md;
+    }
+    .about__card svg{
+        @apply size-12 text-primary;
+    }
+    .about__card h6{
+        @apply my-2;
+    }
+    .about__card p{
+        @apply text-sm ;
+    }
+
+
+
+    .jobListing__verfied{
+        @apply flex gap-2 items-center bg-primary/20 px-3 py-1 w-fit rounded-full;
+    }
+    .jobListing__verfied svg{
+        @apply size-4;
+    }
+
+    .jobListing__logo{
+        @apply flex items-center gap-4 mt-[-1.7rem;]
+    }
+    
+    
+    
+
+
+    /* .headerNav{
+        @apply  flex items-center;
+    }
+    .headerNav ul{
+        @apply gap-12;
+    }
+    .headerNav ul li{
+        @apply font-semibold;
+    }
+    .headerNav ul li:hover{
+        @apply text-primary;
+    }
+    .headerNav ul.open{
+        @apply opacity-100 h-fit shadow-md max-w-7xl w-full top-[5.5rem] px-4 pb-3;
+    } */
+
+    .toggleMenu{
+        @apply flex flex-col gap-2;
+    }
+    .toggleMenu span{
+        @apply bg-black/80 inline-block content-["*"] w-7 h-[2px] rounded-xl;
+    }
+    .toggleMenu.open span:first-child{
+        @apply rotate-45 translate-y-2;
+    }
+    .toggleMenu.open span:nth-child(2){
+        @apply opacity-0;
+    }
+    .toggleMenu.open span:last-child{
+        @apply -rotate-45 -translate-y-1;
+    }
+
+    .btn--primary{
+        @apply text-sm bg-primary text-white px-8 py-3 rounded-md text-center lg:w-auto;
+    }
+
+}
