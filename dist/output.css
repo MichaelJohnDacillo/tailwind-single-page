@@ -684,7 +684,6 @@ h6{
 
 .headerNav{
   display: flex;
-  display: none;
   align-items: center;
 }
 
@@ -786,7 +785,7 @@ h6{
 }
 
 .toggleMenu.open span:first-child{
-  --tw-translate-y: 0.5rem;
+  --tw-translate-y: 1rem;
   --tw-rotate: 45deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }

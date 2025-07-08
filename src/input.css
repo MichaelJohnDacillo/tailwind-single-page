@@ -61,7 +61,7 @@
 @layer components{
 
     .headerNav{
-        @apply flex items-center hidden;
+        @apply flex items-center ;
     }
     .headerNav ul{
         @apply font-semibold flex gap-12;
@@ -123,7 +123,7 @@
         @apply bg-black/80 inline-block content-["*"] w-7 h-[2px] rounded-xl;
     }
     .toggleMenu.open span:first-child{
-        @apply rotate-45 translate-y-2;
+        @apply rotate-45 translate-y-4;
     }
     .toggleMenu.open span:nth-child(2){
         @apply opacity-0;
