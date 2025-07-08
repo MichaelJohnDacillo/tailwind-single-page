@@ -67,11 +67,9 @@
         @apply font-semibold flex gap-12;
     }
 
+
     .about__card{
-        @apply max-w-96;
-    }
-    .about__card{
-        @apply flex flex-col items-center text-center shadow-2xl py-10 px-12 rounded-md;
+        @apply max-w-96 bg-white flex flex-col items-center text-center shadow-2xl py-10 px-12 rounded-md;
     }
     .about__card svg{
         @apply size-12 text-primary;
@@ -80,21 +78,56 @@
         @apply my-2;
     }
     .about__card p{
-        @apply text-sm ;
+        @apply text-sm text-black/50;
+    }
+    .about__card:hover{
+        @apply bg-primary;
+    }
+    .about__card:hover svg,
+    .about__card:hover h6,
+    .about__card:hover p {
+        @apply text-white;
     }
 
 
+    
 
-    .jobListing__verfied{
+
+    .job-list__card{
+        @apply max-w-96 grid gap-8 shadow-2xl p-6 rounded-xl bg-white
+    }
+    .job-list__card__badge{
         @apply flex gap-2 items-center bg-primary/20 px-3 py-1 w-fit rounded-full;
     }
-    .jobListing__verfied svg{
-        @apply size-4;
+    .job-list__card__badge svg{
+        @apply size-4 bg-primary rounded-full text-white;
     }
 
-    .jobListing__logo{
-        @apply flex items-center gap-4 mt-[-1.7rem;]
+    .job-listing__card__info{
+        @apply flex items-center gap-4 mt-[-1.7rem];
     }
+    .job-listing__card__info small{
+        @apply text-black/50;
+    }
+    .job-listing__card__info h6{
+        @apply text-secondary;
+    }
+    .job-list__card hr{
+        @apply mt-[-1.6rem];
+    }
+    .job-list__card h5{
+        @apply mt-[-2rem];
+    }
+    .job-list__card p{
+        @apply text-black/50 text-sm mt-[-1.1rem];
+    }
+    .job-listing__card__details svg{
+        @apply size-5 fill-primary stroke-white;
+    }
+    .job-listing__card__details span{
+        @apply text-black/50 text-sm;
+    }
+    
     
     
     
